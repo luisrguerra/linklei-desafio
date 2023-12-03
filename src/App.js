@@ -3,13 +3,15 @@ import './App.css';
 function App() {
   return (
     <div className="App">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.2.96/css/materialdesignicons.min.css" integrity="sha512-LX0YV/MWBEn2dwXCYgQHrpa9HJkwB+S+bnBpifSOTO1No27TqNMKYoAn6ff2FBh03THAzAiiCwQ+aPX+/Qt/Ow==" crossorigin="anonymous" referrerpolicy="no-referrer" />
       <Navbar />
       <CreatePost />
       <Post
         user="Steve Jobs"
         userImage="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Steve_Jobs_Headshot_2010-CROP.jpg/640px-Steve_Jobs_Headshot_2010-CROP.jpg"
         date={new Date().toDateString()}
-        text="WOW! What a cool social network."
+        text="WOW! What a cute dog."
+        image="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Cute_dog.jpg/640px-Cute_dog.jpg"
       />
     </div>
   );
@@ -66,7 +68,7 @@ function Post({ text, user, userImage, date, image }) {
       </div>
       <div className="post-content">
         <p style={{ textAlign: 'left',margin:'0.5em',marginBottom:'0px'}}>{text}</p>
-        {image && <img src={image} alt="Post Image" style={{ maxHeight: '64px' }} />}
+        <img src={image} alt="Post Image" style={{ maxWidth: '80vw',marginTop:'0.5em',borderRadius: '3px' }} />
       </div>
     </div>
   );
