@@ -37,6 +37,12 @@ function App() {
         </Modal.Header>
         <Modal.Body>
         <Form.Group>
+        <Form.Label>Autor do post:</Form.Label>
+        <Form.Control
+        type="text"
+        />
+        </Form.Group>
+        <Form.Group>
         <Form.Label>Categoria:</Form.Label>
         <Form.Select>
           <option value="post">Post</option>
