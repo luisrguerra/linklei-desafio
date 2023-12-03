@@ -37,6 +37,14 @@ function App() {
         </Modal.Header>
         <Modal.Body>
         <Form.Group>
+        <Form.Label>Categoria:</Form.Label>
+        <Form.Select>
+          <option value="post">Post</option>
+          <option value="article">Artigo</option>
+          <option value="group">Grupo</option>
+        </Form.Select>
+        </Form.Group>
+        <Form.Group>
           <Form.Label>Texto:</Form.Label>
           <Form.Control as="textarea" rows={4} />
         </Form.Group>
