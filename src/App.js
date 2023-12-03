@@ -105,9 +105,8 @@ function Post({ text, user, userImage, date, image }) {
           <Dropdown className="postOptions" as={ButtonGroup}>
             <Dropdown.Toggle variant="light" id="dropdown-split-basic"></Dropdown.Toggle>
             <Dropdown.Menu>
-              <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-              <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-              <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+              <Dropdown.Item>Editar</Dropdown.Item>
+              <Dropdown.Item>Excluir</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
         </div>

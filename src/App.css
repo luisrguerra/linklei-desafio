@@ -7,9 +7,13 @@ body{
   font-family: Lato,'Source Sans Pro';
 }
 
-.postOptions{
+div.postOptions{
   width: 2em;
   height: 2em;
   font-size: 1.5em;
   margin-left: auto;
+}
+
+button#dropdown-split-basic{
+ background-color: transparent;
 }
