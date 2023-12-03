@@ -74,7 +74,7 @@ function App() {
 function Navbar() {
   return (
     <nav>
-      <h1 style={{ textAlign: 'left' }}>Logo</h1>
+      <h3 style={{ textAlign: 'left' }}>Rede Social</h3>
     </nav>
   );
 }
