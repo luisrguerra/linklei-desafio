@@ -7,9 +7,7 @@ body{
   font-family: Lato,'Source Sans Pro';
 }
 
-button.postOptions{
-  border: none;
-  background: none;
+.postOptions{
   width: 2em;
   height: 2em;
   font-size: 1.5em;

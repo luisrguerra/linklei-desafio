@@ -2,6 +2,8 @@ import './App.css';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
+import Dropdown from 'react-bootstrap/Dropdown';
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import { useState } from 'react';
 
 function App() {
@@ -100,7 +102,14 @@ function Post({ text, user, userImage, date, image }) {
           <h4 style={{ textAlign: 'left',margin:'0.5em',marginTop:'0px'}}>{user}</h4>
           <p style={{ textAlign: 'left',margin:'0.5em' }}>{date}</p>
           </div>
-          <button className="postOptions"><span className="mdi mdi-dots-horizontal"></span></button>
+          <Dropdown className="postOptions" as={ButtonGroup}>
+            <Dropdown.Toggle variant="light" id="dropdown-split-basic"></Dropdown.Toggle>
+            <Dropdown.Menu>
+              <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+              <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+              <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
         </div>
       </div>
       <div className="post-content">
