@@ -3,7 +3,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.2.96/css/materialdesignicons.min.css" integrity="sha512-LX0YV/MWBEn2dwXCYgQHrpa9HJkwB+S+bnBpifSOTO1No27TqNMKYoAn6ff2FBh03THAzAiiCwQ+aPX+/Qt/Ow==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.2.96/css/materialdesignicons.min.css" integrity="sha512-LX0YV/MWBEn2dwXCYgQHrpa9HJkwB+S+bnBpifSOTO1No27TqNMKYoAn6ff2FBh03THAzAiiCwQ+aPX+/Qt/Ow==" crossOrigin="anonymous" referrerPolicy="no-referrer" />
       <Navbar />
       <CreatePost />
       <Post
@@ -64,6 +64,7 @@ function Post({ text, user, userImage, date, image }) {
           <h4 style={{ textAlign: 'left',margin:'0.5em',marginTop:'0px'}}>{user}</h4>
           <p style={{ textAlign: 'left',margin:'0.5em' }}>{date}</p>
           </div>
+          <button className="postOptions"><span className="mdi mdi-dots-horizontal"></span></button>
         </div>
       </div>
       <div className="post-content">

@@ -2,3 +2,16 @@
   text-align: center;
   margin: 1em;
 }
+
+body{
+  font-family: Lato,'Source Sans Pro';
+}
+
+button.postOptions{
+  border: none;
+  background: none;
+  width: 2em;
+  height: 2em;
+  font-size: 1.5em;
+  margin-left: auto;
+}
