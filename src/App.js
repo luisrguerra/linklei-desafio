@@ -80,21 +80,12 @@ function Navbar() {
 }
 
 function Post({ text, user, userImage, date, image }) {
-  const postStyle = {
-    border: '1px solid rgb(0 0 0 / 23%)',
-    maxWidth: '42em',
-    margin: 'auto',
-    marginTop: '1em',
-    marginBottom: '1em',
-    padding: '1em',
-    borderRadius: '4px',
-  };
   const userImageStyle = {
     maxHeight: '64px',
     borderRadius: '4px',
   };
   return (
-    <div className="post" style={postStyle}>
+    <div className="post">
       <div className="post-header">
         <div style={{display: 'flex'}}>
           <img src={userImage} alt={user} style={userImageStyle} />
