@@ -4,23 +4,10 @@ import Modal from 'react-bootstrap/Modal';
 import { useState } from 'react';
 
 function App() {
-  return (
-    <div className="App">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.2.96/css/materialdesignicons.min.css" integrity="sha512-LX0YV/MWBEn2dwXCYgQHrpa9HJkwB+S+bnBpifSOTO1No27TqNMKYoAn6ff2FBh03THAzAiiCwQ+aPX+/Qt/Ow==" crossOrigin="anonymous" referrerPolicy="no-referrer" />
-      <Navbar />
-      <CreatePost />
-      <Post
-        user="Steve Jobs"
-        userImage="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Steve_Jobs_Headshot_2010-CROP.jpg/640px-Steve_Jobs_Headshot_2010-CROP.jpg"
-        date={new Date().toDateString()}
-        text="WOW! What a cute dog."
-        image="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Cute_dog.jpg/640px-Cute_dog.jpg"
-      />
-    </div>
-  );
-}
+  const [show, setShow] = useState(false);
 
-function CreatePost() {
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   const createPostButtonStyle = {
     backgroundColor: 'white',
     border: '1px solid rgb(0 0 0 / 40%)',
@@ -32,7 +19,32 @@ function CreatePost() {
     paddingInline: '0.3em',
   };
   return (
-    <button style={createPostButtonStyle}>Criar Post +</button>
+    <div className="App">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.2.96/css/materialdesignicons.min.css" integrity="sha512-LX0YV/MWBEn2dwXCYgQHrpa9HJkwB+S+bnBpifSOTO1No27TqNMKYoAn6ff2FBh03THAzAiiCwQ+aPX+/Qt/Ow==" crossOrigin="anonymous" referrerPolicy="no-referrer" />
+      <Navbar />
+      <button style={createPostButtonStyle} onClick={handleShow}>Criar Post +</button>
+      <Post
+        user="Steve Jobs"
+        userImage="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Steve_Jobs_Headshot_2010-CROP.jpg/640px-Steve_Jobs_Headshot_2010-CROP.jpg"
+        date={new Date().toDateString()}
+        text="WOW! What a cute dog."
+        image="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Cute_dog.jpg/640px-Cute_dog.jpg"
+      />
+      <Modal id="ModalDialog" show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Opções da postagem</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Woohoo, you are reading this text in a modal!</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={handleClose}>
+            Save Changes
+          </Button>
+        </Modal.Footer>
+      </Modal>
+    </div>
   );
 }
 
@@ -45,10 +57,6 @@ function Navbar() {
 }
 
 function Post({ text, user, userImage, date, image }) {
-  const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
   const postStyle = {
     border: '1px solid rgb(0 0 0 / 23%)',
     maxWidth: '42em',
@@ -71,28 +79,13 @@ function Post({ text, user, userImage, date, image }) {
           <h4 style={{ textAlign: 'left',margin:'0.5em',marginTop:'0px'}}>{user}</h4>
           <p style={{ textAlign: 'left',margin:'0.5em' }}>{date}</p>
           </div>
-          <button className="postOptions" onClick={handleShow}><span className="mdi mdi-dots-horizontal"></span></button>
+          <button className="postOptions"><span className="mdi mdi-dots-horizontal"></span></button>
         </div>
       </div>
       <div className="post-content">
         <p style={{ textAlign: 'left',margin:'0.5em',marginBottom:'0px'}}>{text}</p>
         <img src={image} alt="Post" style={{ maxWidth: '79vw',marginTop:'0.5em',borderRadius: '3px' }} />
       </div>
-
-      <Modal id="ModalDialog" show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Opções da postagem</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>Woohoo, you are reading this text in a modal!</Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
-          </Button>
-        </Modal.Footer>
-      </Modal>
     </div>
   );
 }
