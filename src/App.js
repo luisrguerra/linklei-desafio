@@ -36,13 +36,14 @@ function App() {
           <Modal.Title>Criar postagem</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-        <Form.Group>
+        <Form.Group className='mb-3'>
         <Form.Label>Autor do post:</Form.Label>
         <Form.Control
-        type="text"
+          type="text"
+          required
         />
         </Form.Group>
-        <Form.Group>
+        <Form.Group className='mb-3'>
         <Form.Label>Categoria:</Form.Label>
         <Form.Select>
           <option value="post">Post</option>
@@ -52,7 +53,7 @@ function App() {
         </Form.Group>
         <Form.Group>
           <Form.Label>Texto:</Form.Label>
-          <Form.Control as="textarea" rows={4} />
+          <Form.Control as="textarea" rows={4} required />
         </Form.Group>
         </Modal.Body>
         <Modal.Footer>
