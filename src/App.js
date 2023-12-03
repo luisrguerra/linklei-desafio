@@ -1,6 +1,7 @@
 import './App.css';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import Form from 'react-bootstrap/Form';
 import { useState } from 'react';
 
 function App() {
@@ -32,15 +33,20 @@ function App() {
       />
       <Modal id="ModalDialog" show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Opções da postagem</Modal.Title>
+          <Modal.Title>Criar postagem</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Woohoo, you are reading this text in a modal!</Modal.Body>
+        <Modal.Body>
+        <Form.Group>
+          <Form.Label>Texto:</Form.Label>
+          <Form.Control as="textarea" rows={4} />
+        </Form.Group>
+        </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
-            Close
+            Descartar
           </Button>
           <Button variant="primary" onClick={handleClose}>
-            Save Changes
+            Publicar
           </Button>
         </Modal.Footer>
       </Modal>
