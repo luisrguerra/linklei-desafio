@@ -23,3 +23,10 @@ Observação: Ao instalar o Node.js no Windows, certifique-se de marcar a opçã
   ```
   npm start
   ```
+
+### Screenshots
+
+<img src="screenshots/desktop.png"/>
+<img src="screenshots/dropdown.png"/>
+<img src="screenshots/modal dialog.png"/>
+<img src="screenshots/smartphone.png"/>
