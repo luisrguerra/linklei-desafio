@@ -30,3 +30,4 @@ Observação: Ao instalar o Node.js no Windows, certifique-se de marcar a opçã
 <img src="screenshots/dropdown.png"/>
 <img src="screenshots/modal dialog.png"/>
 <img src="screenshots/smartphone.png"/>
+<img src="screenshots/gif.gif"/>
